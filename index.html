@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon | Singularity</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #ffffff;
+            overflow: hidden;
+        }
+
+        .background-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            opacity: 0.3;
+        }
+
+        .background-animation::before,
+        .background-animation::after {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .background-animation::before {
+            background: radial-gradient(circle, #e94560 0%, transparent 70%);
+            top: -100px;
+            right: -100px;
+        }
+
+        .background-animation::after {
+            background: radial-gradient(circle, #0f3460 0%, transparent 70%);
+            bottom: -100px;
+            left: -100px;
+            animation-delay: -4s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(30px, 30px) scale(1.1); }
+        }
+
+        .container {
+            text-align: center;
+            z-index: 1;
+            padding: 2rem;
+            max-width: 600px;
+        }
+
+        .logo {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.8; }
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 300;
+            letter-spacing: 0.5rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            color: #a0a0a0;
+            margin-bottom: 3rem;
+            line-height: 1.6;
+        }
+
+        .coming-soon {
+            display: inline-block;
+            padding: 1rem 3rem;
+            border: 2px solid #e94560;
+            border-radius: 50px;
+            font-size: 1rem;
+            letter-spacing: 0.3rem;
+            text-transform: uppercase;
+            color: #e94560;
+            background: transparent;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .coming-soon:hover {
+            background: #e94560;
+            color: #ffffff;
+            box-shadow: 0 0 30px rgba(233, 69, 96, 0.5);
+        }
+
+        .social-links {
+            margin-top: 3rem;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .social-links a {
+            color: #a0a0a0;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #e94560;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 2rem;
+            left: 0;
+            right: 0;
+            text-align: center;
+            color: #505050;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-animation"></div>
+    
+    <div class="container">
+        <div class="logo">🌌</div>
+        <h1>Singularity</h1>
+        <p class="tagline">Something extraordinary is on the horizon. We're crafting an experience that will redefine possibilities.</p>
+        <span class="coming-soon">Coming Soon</span>
+        
+        <div class="social-links">
+            <a href="https://github.com/cosmic-hydra" target="_blank">GitHub</a>
+        </div>
+    </div>
+    
+    <div class="footer">
+        &copy; 2026 Singularity. All rights reserved.
+    </div>
+</body>
+</html>
